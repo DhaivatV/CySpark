@@ -1,3 +1,0 @@
-# https://github.com/cython/cython/issues/3450
-TestInline
-scanner_trace
