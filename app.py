@@ -1,24 +1,16 @@
 # app.py
-
-from server import SimpleHTTPServer, RequestHandler
+from server_conf.server import SimpleHTTPServer
+from Routes.home import HomePageHandler
+from Routes.about import AboutPageHandler
 
 # Define route handlers
-def home_handler():
-    return ("<html><body><h1>Server is up and running!!</h1></body></html>")
-
-def about_handler():
-    return ("<html><body><h1>About Page!!</h1></body></html>")
-
-def not_found_handler():
-    return ("Not Found")
-
 def main():
     # Initialize server
     server = SimpleHTTPServer(port=8080)
 
     # Add routes directly to the server
-    server.add_route("/", home_handler)
-    server.add_route("/about", about_handler)
+    server.add_route("/", HomePageHandler().response)
+    server.add_route("/about", AboutPageHandler().response)
 
     try:
         # Start server

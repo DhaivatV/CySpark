@@ -1,5 +1,5 @@
 from http.server import BaseHTTPRequestHandler, HTTPServer
-from router import Router
+from server_conf.router import Router
 
 # Custom HTTPServer class to include router_obj
 class CustomHTTPServer(HTTPServer):

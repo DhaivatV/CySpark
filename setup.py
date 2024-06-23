@@ -3,6 +3,9 @@ from Cython.Build import cythonize
 
 setup(
     name='CySpark',
-    ext_modules = cythonize(["server.pyx", "router.pyx"]) ,
+    ext_modules = cythonize([
+        "Routes/*.pyx",
+        "server_conf/*.pyx"
+    ]) ,
     packages=['CySpark']
 )
