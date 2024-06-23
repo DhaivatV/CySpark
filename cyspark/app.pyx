@@ -39,7 +39,7 @@ cdef class App:
         self.server = CustomHTTPServer(('0.0.0.0', port), RequestHandler, self.router_obj)
 
     def start(self):
-        print("Welcome to CySpark Server!!\nServer in up and running at url: http://localhost:8080")
+        print("Welcome to CySpark Server 🤗🤗 !!\nServer in up and running at url: http://localhost:8080 🎉🎉")
         print(f"Starting server on port {self.port}")
         self.server.serve_forever()
 
