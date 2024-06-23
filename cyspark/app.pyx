@@ -1,5 +1,5 @@
 from http.server import BaseHTTPRequestHandler, HTTPServer
-from server_conf.router import Router
+from cyspark.router import Router
 
 # Custom HTTPServer class to include router_obj
 class CustomHTTPServer(HTTPServer):
@@ -28,7 +28,7 @@ class RequestHandler(BaseHTTPRequestHandler):
         if message:
             self.wfile.write(message.encode('utf-8'))
 
-cdef class SimpleHTTPServer:
+cdef class App:
     cdef object server
     cdef int port
     cdef object router_obj

@@ -3,4 +3,4 @@
 from pyximport import pyximport
 pyximport.install()
 
-from server_conf import *
+from cyspark import *
