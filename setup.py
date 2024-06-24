@@ -5,7 +5,6 @@ setup(
     name='CySpark',
     ext_modules = cythonize([
         "Routes/*.pyx",
-        "cyspark/*.pyx"
     ]) ,
     packages=['CySpark']
 )
